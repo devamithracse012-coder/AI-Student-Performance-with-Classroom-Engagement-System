@@ -1,0 +1,6 @@
+azure-functions
+scikit-learn
+pandas
+joblib
+numpy
+scipy

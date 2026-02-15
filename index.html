@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Student Performance</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dark">
+
+<!-- 🎥 Background Video -->
+<video autoplay muted loop id="bg-video">
+    <source src="https://cdn.coverr.co/videos/coverr-students-studying-in-class-1585/1080p.mp4" type="video/mp4">
+</video>
+
+<div class="overlay"></div>
+
+<!-- 🌗 Theme Toggle -->
+<div class="theme-toggle" onclick="toggleTheme()">
+    🌙
+</div>
+
+<div class="container">
+
+    <h1>🎓 AI-Based Student Performance & Classroom Engagement</h1>
+
+    <div class="cards">
+
+        <!-- MODULE 1 -->
+        <div class="card">
+            <h2>📊 Predict Academic Score</h2>
+
+            <input type="number" id="hours" placeholder="Study Hours">
+            <input type="number" id="attendance" placeholder="Attendance %">
+
+            <button onclick="predictScore()">Predict Score</button>
+
+            <div class="circle-container">
+                <div class="progress-circle" id="progressCircle">
+                    <span id="scoreText">--%</span>
+                </div>
+                <p id="performanceText">Waiting for input...</p>
+            </div>
+        </div>
+
+        <!-- MODULE 2 -->
+        <div class="card">
+            <h2>🧠 Detect Classroom Engagement</h2>
+
+            <input type="file" id="imageInput" accept="image/*" onchange="previewImage()">
+
+            <div class="preview">
+                <img id="previewImg">
+            </div>
+
+            <button onclick="analyzeImage()">Analyze Image</button>
+
+            <p id="analysisResult">Waiting for image...</p>
+        </div>
+
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
